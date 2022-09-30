@@ -1,0 +1,18 @@
+data_loading_params:
+  data_path: './BIPEDv2/edges/imgs' # path to images
+  labels_path: './BIPEDv2/edges/edge_maps' # path to gt
+  patch_shape: [40,40]
+  overlap: 2
+  val_set: True
+
+model_params:
+  model_name: 'My model' # model name used for checkpointing purposes
+  input_dim: 5 # the number of input features to the autoencoder
+  activation: 'ReLU'
+  p: 0.0 # dropout
+  metric: 1.0
+  hidden_sizes: [10] # hidden layer sizes
+  overlap: 2
+  l_mag: 1.0 # regularisation
+  l2: 0 # weight decay
+  lr: 0.001 # learning rate
